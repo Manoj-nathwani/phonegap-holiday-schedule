@@ -4,6 +4,10 @@ A simple holiday schedule app to consolidate all your holiday information into o
 # Intro
 Recently I went on holiday and had a few bits of information to keep track of such as 2 flights, 4 train journeys and 3 hotel reservations. I thought this would be a great opportunity to make my first ever Angular app and deploy it as a native app using PhoneGap. The goal of this app was to make a super simple, light-weight app which works offline when abroad and I could deploy to each of ours phones. No paper!
 
+Page1  | Page2  | Attachment Viewer
+------------- | ------------- | -------------
+![alt tag](https://farm4.staticflickr.com/3956/18845008009_9255df9020_o_d.png)  | ![alt tag](https://farm1.staticflickr.com/297/18408663044_5bfeb713f4_o_d.png)  | ![alt tag](https://farm4.staticflickr.com/3795/18845251889_59015efc67_o_d.png)
+
 # Features
 - The app works off a single JSON file which you can easilly manage, without worrying about how the app itself works.
 - All your booking confimrations and tickets can be saved as images which can then be opended and zoomed into, all without internet. This works great for saving e-tickets with QR codes.
