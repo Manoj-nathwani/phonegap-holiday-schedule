@@ -1,0 +1,23 @@
+a {
+  color: #8e44ad !important;
+}
+.btn {
+  margin-bottom: 10px;
+}
+.tile {
+  text-align: center;
+  font-size: 6em;
+  background-color: #8e44ad;
+  color: white;
+  border-radius: 3px;
+}
+i {
+  margin-right: 5px;
+}
+img{
+  width: 100%;
+}
+.list-group-heading{
+  background-color: #9b59b6;
+  color: white;
+}

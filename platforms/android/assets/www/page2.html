@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="page2">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- angular -->
+  <script src="js/angular.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <!-- css -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="animated fadeIn">
+
+  <!-- navbar -->
+  <nav ng-controller="navbar" class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="page1.html"><i class="fa fa-angle-left"></i>{{ navbar_title }}</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- tile -->
+    <div ng-controller="tile" class="panel panel-default">
+      <div class="tile"><i class="fa fa-{{tile_icon}}"></i></div>
+    </div>
+    <!-- table_data -->
+    <div class="panel panel-default" ng-controller="table_data" ng-show="items.length">
+      <table class="table">
+        <tr ng-repeat="x in items">
+          <td>{{x.key}}</td>
+          <td ng-if="x.value_link"><a href="{{x.value_link}}">{{x.value}}</a></td>
+          <td ng-if="!x.value_link">{{x.value}}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- attachments_data -->
+    <div class="list-group" ng-controller="attachments_data" ng-show="items.length">
+      <a ng-repeat="x in items" href="image_viewer.html?file={{x.file_name}}" class="list-group-item">
+        <i class="fa fa-file"></i>
+        <span> {{x.title}}</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

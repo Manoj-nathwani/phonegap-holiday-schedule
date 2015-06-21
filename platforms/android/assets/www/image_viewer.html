@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- css -->
+  <link href="css/animate.min.css" rel="stylesheet">
+  <style media="screen">
+    img {
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body class="animated slideInUp">
+
+  <!-- js -->
+  <script type="text/javascript">
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    document.write("<img id='img' src=files/" + getParameterByName('file') + " />");
+
+    var img = document.getElementById('img');
+    img.addEventListener("click", function() {
+      img.style.width = img.clientWidth * 1.1 + "px";
+    });
+  </script>
+
+</body>
+
+</html>

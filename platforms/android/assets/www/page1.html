@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="page1">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- angular -->
+  <script src="js/angular.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <!-- css -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="animated fadeIn">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><i class="fa fa-suitcase"></i> Summer Escape ' 15</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <div class="container" id="ListElements" ng-controller="ListGroupCtrl">
+    <div ng-repeat="x in items">
+      <div class="list-group">
+        <div class="list-group-item list-group-heading">{{x.heading}}</div>
+        <a ng-repeat="y in x.events" href="page2.html?heading={{$parent.$index}}&event={{$index}}" class="list-group-item">
+          <i class="fa fa-{{y.fa_icon}}"></i> {{y.name}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
